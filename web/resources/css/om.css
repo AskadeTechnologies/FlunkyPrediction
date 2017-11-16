@@ -1,0 +1,61 @@
+/* Control the right sidebar size */
+.control-sidebar-wide {
+	width: 800px;
+	right: -800px;
+}
+
+/* Hide horizontal scrollbars */
+.ui-jqgrid .ui-jqgrid-bdiv {
+  position: relative; 
+  margin: 0em; 
+  padding:0; 
+  /*overflow: auto;*/ 
+  overflow-x:hidden; 
+  overflow-y:auto; 
+  text-align:left;
+}
+
+.right {
+	float: right;	
+}
+
+.hidden {
+	display: none;
+}
+.magenta{
+	background-color: magenta !important;
+}
+.h-divider {
+	margin-top:5px;
+	margin-bottom:5px;
+	height:1px;
+	width:100%;
+	border-top:1px solid gray;
+}
+
+.h-spacer {
+	margin-top:5px;
+	margin-bottom:5px;
+	height:1px;
+	width:100%;
+}
+
+.om-tree-parent {
+	font-weight: bold;
+}
+
+.transparent-bg {
+	background-color:rgba(0, 0, 0, 0) !important;
+}
+
+.overflow-visible {
+	overflow: visible !important;
+}
+
+.drag-over {
+	background-color: lightblue;
+}
+
+.tree-modif {
+	color: red;
+}
