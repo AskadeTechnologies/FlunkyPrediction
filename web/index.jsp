@@ -167,14 +167,15 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-6">
               <canvas id="top3Players" width="150" height="150"></canvas>
+            </div>
+            <div class="col-xs-6">
+              <canvas id="basketSize" width="150" height="150"></canvas>
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-8">
-              <canvas id="basketSize" width="150" height="150"></canvas>
-            </div>
+
           </div>
 
         </div>
