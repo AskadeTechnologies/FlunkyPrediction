@@ -7,7 +7,7 @@ var FlunkyWorkspace = function() {
 }
 
 FlunkyWorkspace.prototype.init = function() {
-    this.urlPrefix = "";
+    this.urlPrefix = "/flunkyPrediction";
     this.showDashboard();
 
 }
