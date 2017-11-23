@@ -19,6 +19,8 @@ public class DepartmentStore {
     private Integer id;
     private String code;
     private String description;
+    private String categoryCode;
+    private String subcategoryCode;
     private Date dateIn;
     private Date dateOut;
     private Date creationDate;
@@ -43,6 +45,14 @@ public class DepartmentStore {
     @Column(name = "description")
     public String getDescription() {
         return description;
+    }
+    @Column(name = "category_code")
+    public String getCategoryCode() {
+        return categoryCode;
+    }
+    @Column(name = "subcategory_code")
+    public String getSubcategoryCode() {
+        return subcategoryCode;
     }
 
     @Column(name = "data_in")
@@ -122,12 +132,22 @@ public class DepartmentStore {
         this.lastUpdatedBy = lastUpdatedBy;
     }
 
+    public void setCategoryCode(String categoryCode) {
+        this.categoryCode = categoryCode;
+    }
+
+    public void setSubcategoryCode(String subcategoryCode) {
+        this.subcategoryCode = subcategoryCode;
+    }
+
     @Override
     public String toString() {
         return "DepartmentStore{" +
                 "id=" + id +
                 ", code='" + code + '\'' +
                 ", description='" + description + '\'' +
+                ", categoryCode='" + categoryCode + '\'' +
+                ", subcategoryCode='" + subcategoryCode + '\'' +
                 ", dateIn=" + dateIn +
                 ", dateOut=" + dateOut +
                 ", creationDate=" + creationDate +

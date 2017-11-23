@@ -28,6 +28,7 @@ public class CategoryAnalytics {
     private BigDecimal topPlayer2Value;
     private String topPlayer3;
     private BigDecimal topPlayer3Value;
+    private String relatedCategory;
 
     public CategoryAnalytics() {
     }
@@ -94,6 +95,10 @@ public class CategoryAnalytics {
     public BigDecimal getTopPlayer3Value() {
         return topPlayer3Value;
     }
+    @Column(name = "related_category")
+    public String getRelatedCategory() {
+        return relatedCategory;
+    }
 
     public void setId(Integer id) {
         this.id = id;
@@ -151,6 +156,10 @@ public class CategoryAnalytics {
         this.topPlayer3Value = topPlayer3Value;
     }
 
+    public void setRelatedCategory(String relatedCategory) {
+        this.relatedCategory = relatedCategory;
+    }
+
     @Override
     public String toString() {
         return "CategoryAnalytics{" +
@@ -168,6 +177,7 @@ public class CategoryAnalytics {
                 ", topPlayer2Value=" + topPlayer2Value +
                 ", topPlayer3='" + topPlayer3 + '\'' +
                 ", topPlayer3Value=" + topPlayer3Value +
+                ", relatedCategory=" + relatedCategory +
                 '}';
     }
 }

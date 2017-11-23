@@ -227,6 +227,11 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <canvas id="sharePercChart" width="150" height="150"></canvas>
+            </div>
+          </div>
         </div>
 
   </div>

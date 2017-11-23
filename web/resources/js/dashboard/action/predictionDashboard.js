@@ -19,13 +19,32 @@ PredictionDashboardAction.prototype.initRetailerPage = function(){
             $("#retailerForm_Churn").val(result.data.churn);
             $("#retailerForm_NewCustomers").val(result.data.newCustomers);
             $("#retailerForm_NextMonthTx").val(result.data.nextMonthTx);
+
+            new Chart(document.getElementById("sharePercChart"), {
+                type: 'pie',
+                data: {
+                    labels: [retailerCode, 'others'],
+                    datasets: [
+                        {
+                            label: "% ",
+                            backgroundColor: ["#3e95cd", "#8e5ea2"],
+                            data: [result.data.sharePerc, 100 - result.data.sharePerc]
+                        }
+                    ]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: 'Market Share'
+                    }
+                }
+            });
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('Error retrieving clients statistics');
         }
     });
-
-
 }
 
 PredictionDashboardAction.prototype.initPredictionPage = function() {
@@ -73,20 +92,6 @@ PredictionDashboardAction.prototype.initPredictionPage = function() {
             console.log(result);
             var labels = result.data.map(function(a) {return a.month;});
             var values = result.data.map(function(a) {return a.basketSize;});
-            /*for (var i = 0; i < result.data.length; i++){
-                var obj = result.data()[i];
-                for (var key in obj){
-                    if(key == "month") {
-                        var attrName = key;
-                        labels.push(obj[key]);
-                    }
-                    if(key == "basketSize"){
-                        values.push(obj[key]);
-                    }
-                }
-            }*/
-            console.log(labels);
-            console.log(values);
             new Chart(document.getElementById("basketSize"), {
                 type: 'horizontalBar',
                 data: {
